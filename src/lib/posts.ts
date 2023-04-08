@@ -32,12 +32,12 @@ export function getSortedPostsData(): { id: Post["id"] }[] {
   });
 }
 
-export function getAllPostIds(): { params: { id: Post["id"] } }[] {
+export function getAllPostIds(): { params: { slug: Post["id"] } }[] {
   const fileNames = fs.readdirSync(postsDirectory);
   return fileNames.map((fileName) => {
     return {
       params: {
-        id: fileName.replace(/\.md$/, ""),
+        slug: fileName.replace(/\.md$/, ""),
       },
     };
   });

@@ -1,8 +1,8 @@
 import Container from "@/components/Container";
 import { getAllPostIds, getPostData } from "@/lib/posts";
 
-export async function getStaticProps({ params }: { params: { id: string } }) {
-  const postData = await getPostData(params.id);
+export async function getStaticProps({ params }: { params: { slug: string } }) {
+  const postData = await getPostData(params.slug);
   return {
     props: {
       postData,

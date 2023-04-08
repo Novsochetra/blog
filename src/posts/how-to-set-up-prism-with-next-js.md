@@ -1,7 +1,7 @@
 ---
-title: 'Prism with Next.js'
-description: 'Example using Prism / Markdown with Next.js including switching syntax highlighting themes.'
-date: "2023-04-09"
+title: "How To Set Up Prism with Next.js"
+description: "Example using Prism / Markdown with Next.js including switching syntax highlighting themes."
+date: "April 8, 2023"
 tags: ["vim", "react-native"]
 ---
 
@@ -18,16 +18,16 @@ We can retrieve that file's contents using `getDocBySlug('my-post')`.
 ```js
 // lib/docs.js
 
-import fs from 'fs';
-import { join } from 'path';
-import matter from 'gray-matter';
+import fs from "fs";
+import { join } from "path";
+import matter from "gray-matter";
 
-const docsDirectory = join(process.cwd(), 'docs');
+const docsDirectory = join(process.cwd(), "docs");
 
 export function getDocBySlug(slug) {
-  const realSlug = slug.replace(/\.md$/, '');
+  const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(docsDirectory, `${realSlug}.md`);
-  const fileContents = fs.readFileSync(fullPath, 'utf8');
+  const fileContents = fs.readFileSync(fullPath, "utf8");
   const { data, content } = matter(fileContents);
 
   return { slug: realSlug, meta: data, content };
@@ -39,9 +39,9 @@ Then, we can **transform** the raw Markdown into HTML using [remark](https://git
 ```js
 // lib/markdown.js
 
-import { remark } from 'remark';
-import html from 'remark-html';
-import prism from 'remark-prism';
+import { remark } from "remark";
+import html from "remark-html";
+import prism from "remark-prism";
 
 export default async function markdownToHtml(markdown) {
   const result = await remark()
@@ -58,8 +58,8 @@ would convert a Markdown file like this:
 
 ````markdown
 ---
-title: 'My First Post'
-description: 'My very first blog post'
+title: "My First Post"
+description: "My very first blog post"
 ---
 
 # My First Post
