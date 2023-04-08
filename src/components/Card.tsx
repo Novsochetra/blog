@@ -20,15 +20,17 @@ export default function Card({
     <div className="flex p-2 sm:w-12/12 w-full md:w-6/12 lg:w-4/12">
       <Link
         href={`/${id}`}
-        className="group transition ease-in-out duration-300 hover:-translate-x-1 hover:-translate-y-1 bg-white shadow-md border border-slate-500 hover:border-blue-400 hover:bg-blue-400 p-4 rounded-lg flex-1"
+        className="flex flex-col group justify-between transition ease-in-out duration-300 hover:-translate-x-1 hover:-translate-y-1 bg-white shadow-md border border-slate-500 hover:border-blue-400 hover:bg-blue-400 p-4 rounded-lg flex-1"
       >
-        <h5 className="font-bold group-hover:text-white">{title}</h5>
+        <div className="flex flex-1 flex-col">
+          <h5 className="font-bold group-hover:text-white">{title}</h5>
 
-        <p className="text-xs group-hover:text-white text-gray-500 mb-2">
-          {description}
-        </p>
+          <p className="text-xs group-hover:text-white text-gray-500 mb-2">
+            {description}
+          </p>
+        </div>
 
-        <div className="flex flex-row items-center justify-between mt-8">
+        <div className="flex flex-row items-center justify-between">
           <div>
             {tags.map?.((t) => {
               return <Tag key={`post-item-${id}-tag-${t}`} label={t} />;
