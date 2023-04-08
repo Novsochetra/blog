@@ -17,7 +17,7 @@ export default function Card({
   date,
 }: CardProps) {
   return (
-    <div className="flex p-2 sm:w-12/12 w-full md:w-6/12 lg:w-4/12 xl:w-3/12">
+    <div className="flex p-2 sm:w-12/12 w-full md:w-6/12 lg:w-4/12">
       <Link
         href={`/${id}`}
         className="group transition ease-in-out duration-300 hover:-translate-x-1 hover:-translate-y-1 bg-white shadow-md border border-slate-500 hover:border-blue-400 hover:bg-blue-400 p-4 rounded-lg flex-1"

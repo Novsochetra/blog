@@ -20,10 +20,10 @@ interface HomeProps {
 export default function Home({ allPostsData }: HomeProps) {
   return (
     <Container>
-      <div className="m-auto mt-8 flex flex-row flex-wrap">
-        <h1 className="m-2 text-5xl mb-8">
-          Hi <span>👋</span> I am sochetra 🧑‍💻
-        </h1>
+      <h1 className="m-2 text-5xl mt-8 mb-8">
+        Hi <span>👋</span> I am sochetra 🧑‍💻
+      </h1>
+      <div className="flex flex-row flex-wrap">
         {allPostsData.map(({ id, date, description, title, tags }, index) => (
           <Card
             key={`list-post-item-${index}`}
