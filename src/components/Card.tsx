@@ -30,7 +30,7 @@ export default function Card({
           </p>
         </div>
 
-        <div className="flex flex-row items-center justify-between">
+        <div className="flex flex-row items-center justify-between mt-8">
           <div>
             {tags.map?.((t) => {
               return <Tag key={`post-item-${id}-tag-${t}`} label={t} />;
