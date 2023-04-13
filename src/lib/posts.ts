@@ -24,7 +24,10 @@ export function getSortedPostsData(): { id: Post["id"] }[] {
   }) as Post[];
 
   return allPostsData.sort((a, b) => {
-    if (a.date < b.date) {
+    const previousDate = new Date(a.date);
+    const currentDate = new Date(b.date);
+
+    if (previousDate < currentDate) {
       return 1;
     } else {
       return -1;
