@@ -23,7 +23,7 @@ export default function Card({
         className="flex flex-col group justify-between transition ease-in-out duration-300 hover:-translate-x-1 hover:-translate-y-1 bg-white shadow-md border border-slate-500 hover:border-blue-400 hover:bg-blue-400 p-4 rounded-lg flex-1"
       >
         <div className="flex flex-1 flex-col">
-          <h5 className="font-bold group-hover:text-white">{title}</h5>
+          <h5 className="font-semibold group-hover:text-white">{title}</h5>
 
           <p className="text-xs group-hover:text-white text-gray-500 mb-2">
             {description}
