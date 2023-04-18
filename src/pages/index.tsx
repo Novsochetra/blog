@@ -4,40 +4,12 @@ import Card from "@/components/Card";
 import { Post } from "@/interfaces/post";
 // import Navbar from "@/components/Navbar";
 
-export async function getStaticProps() {
-  // const allPostsData = getSortedPostsData() as Post[];
-  const data: Post[] = [
-    {
-      id: "top-5-vim-trick",
-      title: "[vim/neovim] Top 5 tip and trick",
-      description: "some usefull tip and trick",
-      date: "April 13, 2023",
-      tags: ["vim", "neovim"],
-    },
-    {
-      id: "neovim-emmet-balance-outward",
-      title: "[vim/neovim] Emmet Balance Outward",
-      description: "select html / javascript base on thier hierarchy",
-      date: "April 9, 2023",
-      tags: ["vim", "neovim"],
-    },
-    {
-      id: "how-to-set-up-prism-with-next-js",
-      title: "How To Set Up Prism with Next.js",
-      description:
-        "Example using Prism / Markdown with Next.js including switching syntax highlighting themes.",
-      date: "April 8, 2023",
-      tags: ["vim", "react-native"],
-    },
-    {
-      id: "my-first-blog-post",
-      title: "My First Blog Post",
-      description: "The first personal blog post",
-      date: "April 7, 2023",
-      tags: ["vim", "react-native"],
-    },
-  ];
+export async function getServerSideProps() {
+  const url = `${process.env.API_URL}/api/post`;
+  const res = await fetch(url);
+  const data = await res.json();
 
+  // Pass data to the page via props
   return {
     props: {
       allPostsData: data,
