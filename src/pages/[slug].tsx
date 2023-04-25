@@ -24,6 +24,7 @@ export default function BlogDetail({ postData }: { postData: any }) {
     <>
       <Head>
         <title>{postData.title}</title>
+        <meta name="keywords" content={postData.description} />
         <meta name="description" content={postData.description} key="desc" />
       </Head>
       <Container>
