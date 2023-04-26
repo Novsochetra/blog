@@ -25,9 +25,10 @@ export default function Card({
         <div className="flex flex-1 flex-col">
           <h5 className="font-semibold group-hover:text-white">{title}</h5>
 
-          <p className="text-xs group-hover:text-white text-gray-500 mb-2">
-            {description}
-          </p>
+          <p
+            className="text-xs group-hover:text-white text-gray-500 mb-2"
+            dangerouslySetInnerHTML={{ __html: description }}
+          />
         </div>
 
         <div className="flex flex-row items-center justify-between mt-8">

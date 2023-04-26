@@ -8,6 +8,14 @@ export default function handler(
 ) {
   res.status(200).json([
     {
+      id: "why-i-use-tmux-instead-of-iterm-in-2023",
+      title: "Why i use tmux instead of iterm in 2023 ?",
+      description:
+        "tmux is an simple window multiplexer that work on any operating system. it let use switch program by using only one terminal",
+      date: "April 26, 2023",
+      tags: ["tmux"],
+    },
+    {
       id: "top-5-vim-trick",
       title: "[vim/neovim] Top 5 tip and trick",
       description: "some usefull tip and trick",
