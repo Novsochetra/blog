@@ -27,6 +27,14 @@ export default function Home({ allPostsData }: HomeProps) {
     <>
       <Head>
         <title>Sochetra NOV</title>
+        <meta
+          content="https://sochetra-nov.dev/_next/image?url=%2Fmain-profile.jpeg&w=2048&q=100"
+          property="og:image"
+        />
+        <meta content="64" property="og:image:width" />
+        <meta content="64" property="og:image:height" />
+        <meta content="https://blog.sochetra-nov.dev" property="og:url" />
+
         <meta name="keywords" content="sochetra" />
         <meta
           name="description"
@@ -34,6 +42,11 @@ export default function Home({ allPostsData }: HomeProps) {
           key="desc"
         />
         <meta name="description" content="HI" key="desc" />
+        <link
+          rel="icon"
+          type="image/png"
+          href="https://sochetra-nov.dev/_next/image?url=%2Fmain-profile.jpeg&w=2048&q=100"
+        />
       </Head>
 
       <Container>
