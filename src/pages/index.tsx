@@ -38,10 +38,9 @@ export default function Home({ allPostsData }: HomeProps) {
         <meta name="keywords" content="sochetra" />
         <meta
           name="description"
-          content="Hi, My name is sochetra NOV (នៅសុចិត្រា), a guide love mobile app animation, and vim lover"
+          content="Hi 🖐️, My name is sochetra NOV (នៅ សុចិត្រា). A guy love mobile app animation, and vim lover"
           key="desc"
         />
-        <meta name="description" content="HI" key="desc" />
         <link
           rel="icon"
           type="image/png"
