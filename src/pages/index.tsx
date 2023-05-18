@@ -41,6 +41,7 @@ export default function Home({ allPostsData }: HomeProps) {
           content="Hi 🖐️, My name is sochetra NOV (នៅ សុចិត្រា). A guy love mobile app animation, and vim lover"
           key="desc"
         />
+        <meta name="description" content="hahahahahaha" key="desc" />
         <link
           rel="icon"
           type="image/png"
