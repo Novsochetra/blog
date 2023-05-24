@@ -13,22 +13,20 @@ export default function InAppInstall() {
 
       listener = window.addEventListener("beforeinstallprompt", (e) => {
         console.log("EVENT IS LISTEN: ", e);
-        // Prevent the mini-infobar from appearing on mobile
-        e.preventDefault();
         // Stash the event so it can be triggered later.
+        setVisible(true);
         deferredPrompt = e;
         // Update UI notify the user they can install the PWA
         // showInstallPromotion();
         // Optionally, send analytics event that PWA install promo was shown.
-        setVisible(true);
         console.log(`'beforeinstallprompt' event was fired.`);
       });
     }
 
     return () => {
-      window.removeEventListener("beforeinstallprompt", listener);
-      deferredPrompt = null;
-      listener = null;
+      // window.removeEventListener("beforeinstallprompt", listener);
+      // deferredPrompt = null;
+      // listener = null;
     };
   }, []);
 
