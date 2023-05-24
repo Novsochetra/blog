@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 
 let listener: any = null;
+let deferredPrompt: any;
 
 export default function InAppInstall() {
   const [visible, setVisible] = useState(false);
@@ -9,7 +10,6 @@ export default function InAppInstall() {
     if (window) {
       console.log("WINDOW: ", window);
       // Initialize deferredPrompt for use later to show browser install prompt.
-      let deferredPrompt;
 
       listener = window.addEventListener("beforeinstallprompt", (e) => {
         console.log("EVENT IS LISTEN: ", e);
@@ -27,6 +27,8 @@ export default function InAppInstall() {
 
     return () => {
       window.removeEventListener("beforeinstallprompt", listener);
+      deferredPrompt = null;
+      listener = null;
     };
   }, []);
 
@@ -38,7 +40,12 @@ export default function InAppInstall() {
         🥹 Access my articles offiline using our web app 🥹
       </p>
 
-      <button className="bg-white text-sm font-bold text-blue-500 px-4 py-1 rounded-full">
+      <button
+        onClick={() => {
+          console.log("D: ", deferredPrompt);
+        }}
+        className="bg-white text-sm font-bold text-blue-500 px-4 py-1 rounded-full"
+      >
         Install
       </button>
     </div>
