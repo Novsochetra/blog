@@ -33,7 +33,7 @@ Before we get started let deep dive to the meaning of each of thems in JavaScrip
     - **[variables]**: this part it just my personal preference that i will never create the variables and assign it value to undefined. then you will ask my **_why_** ?. Because if we break down the word **undefined** it mean **not defined** or **not yet created/exists**. then if we create the variable and assign its value to **undefined** it will make other developer confuse that the _variable_ or that _properties_ of object doesn't declare or exists yet. 
       
       if this don't convince you yet, let me ask you an question: if you access the properties of object and get the **undefined** value, what idea in your mind that come first:
-        - is that **properties** is **exits with value of undefined** ?  or that properties **not exists**
+        - is that **properties** is **exists with value of undefined** ?  or that properties **not exists**
      
 2. **null** is represent the **intentional** of  absence value. it indicate that the value / variables / properties (object, class) has no value.
     ```js
