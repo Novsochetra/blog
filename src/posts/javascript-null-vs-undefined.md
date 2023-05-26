@@ -4,6 +4,7 @@ title: "JavaScript null vs undefined"
 description: "In the world of JavaScript there been always the confusions when to use null vs undefined"
 date: "May 26 2023"
 tags: ["JavaScript"]
+seoImage: "https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png?20120221235433"
 ---
 
 # JavaScript undefined vs null
