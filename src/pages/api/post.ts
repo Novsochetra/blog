@@ -8,6 +8,14 @@ export default function handler(
 ) {
   res.status(200).json([
     {
+      id: "javascript-null-vs-undefined",
+      title: "JavaScript null vs undefined",
+      description:
+        "In the world of JavaScript, there been always the confusions when to use null vs undefined",
+      date: "May 26, 2023",
+      tags: ["JavaScript"],
+    },
+    {
       id: "why-i-use-tmux-instead-of-iterm-in-2023",
       title: "Why i use tmux instead of iterm in 2023 ?",
       description:
