@@ -35,7 +35,7 @@ Before we get started let deep dive to the meaning of each of thems in JavaScrip
       if this don't convince you yet, let me ask you an question: if you access the properties of object and get the **undefined** value, what idea in your mind that come first:
         - is that **properties** is **exists with value of undefined** ?  or that properties **not exists**
      
-2. **null** is represent the **intentional** of  absence value. it indicate that the value / variables / properties (object, class) has no value.
+2. **null** is represent the **intentional** of  absence value. it indicate that the _value_ / _variables_ / _properties (object, class)_ has no value.
     ```js
     var foo = null
     
