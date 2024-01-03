@@ -2,7 +2,6 @@ import Head from "next/head";
 import Container from "@/components/Container";
 import Card from "@/components/Card";
 import { Post } from "@/interfaces/post";
-import InAppInstall from "@/components/InAppInstall";
 
 export async function getServerSideProps() {
   const url = `${process.env.API_URL}/api/post`;
