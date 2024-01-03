@@ -28,10 +28,7 @@ export default function BlogDetail({ postData }: { postData: any }) {
         <meta name="description" content={postData.description} key="desc" />
         {postData?.seoImage ? (
           <>
-            <meta
-              content="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png?20120221235433"
-              property="og:image"
-            />
+            <meta content={postData.seoImage} property="og:image" />
             <meta content="64" property="og:image:width" />
             <meta content="64" property="og:image:height" />
             <meta
